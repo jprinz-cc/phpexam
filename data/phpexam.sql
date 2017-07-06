@@ -13,22 +13,13 @@ USE `phpexam`;
 DROP TABLE IF EXISTS `quotes`;
 
 CREATE TABLE `quotes` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `quote` text NOT NULL,
   `source` varchar(100) NOT NULL,
   `favorite` tinyint(1) UNSIGNED NOT NULL,
   `date_entered` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `quotes`
---
-ALTER TABLE `quotes`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Add user
